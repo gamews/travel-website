@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Travel and Tourism</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(#4facfe,#e6f3ff);
+text-align:center;
+}
+
+header{
+background:#003366;
+color:white;
+padding:25px;
+letter-spacing:2px;
+}
+
+nav{
+background:#0066cc;
+padding:12px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+padding:6px 12px;
+border-radius:4px;
+}
+
+nav a:hover{
+background:white;
+color:#0066cc;
+}
+
+.hero{
+height:380px;
+background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:42px;
+color:white;
+font-weight:bold;
+text-shadow:2px 2px 8px black;
+}
+
+.section{
+padding:40px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+width:260px;
+margin:18px;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 6px 14px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.05);
+}
+
+.card img{
+width:260px;
+height:180px;
+}
+
+button{
+background:#0066cc;
+color:white;
+border:none;
+padding:10px 18px;
+margin-bottom:15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#003366;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,260px);
+gap:18px;
+justify-content:center;
+}
+
+.gallery-item{
+position:relative;
+cursor:pointer;
+}
+
+.gallery-item img{
+width:260px;
+height:180px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.08);
+}
+
+.caption{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+background:rgba(0,0,0,0.6);
+color:white;
+padding:6px;
+font-size:14px;
+border-radius:0 0 8px 8px;
+}
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.lightbox img{
+max-width:80%;
+max-height:80%;
+border-radius:10px;
+}
+
+.lightbox span{
+position:absolute;
+top:30px;
+right:40px;
+color:white;
+font-size:40px;
+cursor:pointer;
+}
+
+.features{
+width:70%;
+margin:auto;
+}
+
+.features div{
+background:white;
+margin:12px;
+padding:15px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer{
+background:#003366;
+color:white;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Explore The World</h1>
+<p>Your Travel and Tourism Guide</p>
+</header>
+
+<nav>
+<a href="travel.html">Home</a>
+<a href="destinations.html">Destinations</a>
+<a href="packages.html">Packages</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="hero">
+Plan Your Next Adventure
+</div>
+
+<div class="section">
+
+<h2>Popular Destinations</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+<h3>Paris</h3>
+<p>City famous for art and culture.</p>
+<button>View Trip</button>
+</div>
+
+<div class="card">
+<img src="https://cdn.audleytravel.com/2478/1770/79/16027396-pura-ulun-danu-bratan-bali.jpg">
+<h3>Bali</h3>
+<p>Beaches, temples, and nature.</p>
+<button>View Trip</button>
+</div>
+
+<div class="card">
+<img src="https://cdn.britannica.com/65/162465-050-9CDA9BC9/Alps-Switzerland.jpg">
+<h3>Switzerland</h3>
+<p>Snow mountains and lakes.</p>
+<button>View Trip</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Travel Gallery</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" onclick="openImage(this.src)">
+<div class="caption">Mountain Landscape</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" onclick="openImage(this.src)">
+<div class="caption">Forest Valley</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" onclick="openImage(this.src)">
+<div class="caption">Beach Sunset</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" onclick="openImage(this.src)">
+<div class="caption">Island Coast</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" onclick="openImage(this.src)">
+<div class="caption">Northern Lights</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800" onclick="openImage(this.src)">
+<div class="caption">Road Adventure</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+<span onclick="closeImage()">×</span>
+<img id="lightbox-img">
+</div>
+
+<div class="section features">
+
+<h2>Why Travel With Us</h2>
+
+<div>Affordable travel packages</div>
+<div>Experienced travel guides</div>
+<div>Comfortable hotels</div>
+<div>Safe and planned tours</div>
+
+</div>
+
+<footer>
+
+<p>Travel and Tourism Website</p>
+<p>Email travel@example.com</p>
+
+</footer>
+
+<script>
+
+function openImage(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
+}
+
+function closeImage(){
+document.getElementById("lightbox").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
